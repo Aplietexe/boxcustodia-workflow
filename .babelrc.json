@@ -1,0 +1,19 @@
+{
+  "presets": ["react-app"],
+  "plugins": [
+    [
+      "babel-plugin-hoist-constant-jsx-attributes",
+      { "freezeObjects": "development" }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "@babel/transform-react-constant-elements",
+        "@babel/transform-react-inline-elements",
+        "closure-elimination",
+        "loop-optimizer"
+      ]
+    }
+  }
+}
