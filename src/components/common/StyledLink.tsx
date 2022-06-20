@@ -7,6 +7,11 @@ const StyledLink = styled.a`
   color: var(--accent-light);
 
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent-dark);
+  }
 
   display: inline-block;
 

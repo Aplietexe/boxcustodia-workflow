@@ -17,7 +17,7 @@ const Paragraph = styled.p`
 `
 const Company = () => (
   <Pad>
-    <div className="d-flex flex-column align-items-center">
+    <div className="d-flex flex-column align-items-center pb-5">
       <ImageComponent
         className="my-5 pt-5"
         src={boxLogo}
@@ -29,7 +29,7 @@ const Company = () => (
         “Software as a Service” revoluciona y simplifica la gestión de tus
         procesos de negocio a través de la digitalización.
       </Paragraph>
-      <StyledLink className="mb-5 pb-5" href="#">
+      <StyledLink className="mb-5" href="#">
         Conocé nuestra empresa Box custodia
         <ImageComponent src={arrowIcon} />
       </StyledLink>

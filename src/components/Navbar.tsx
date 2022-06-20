@@ -15,6 +15,11 @@ const StyledLink = styled.a`
   text-decoration: none;
 `
 
+const StyledImage = styled(ImageComponent)`
+  width: 2rem;
+  cursor: pointer;
+`
+
 const Navbar = () => (
   <Pad>
     <Row className="mt-4 mb-3">
@@ -33,7 +38,7 @@ const Navbar = () => (
         className="d-flex align-items-end justify-content-end pe-4 pb-2"
         xs={2}
       >
-        <ImageComponent fluid src={loginIcon} style={{ width: "2rem" }} />
+        <StyledImage fluid src={loginIcon} />
       </Col>
     </Row>
   </Pad>
