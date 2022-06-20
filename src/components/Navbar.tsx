@@ -1,8 +1,11 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
+import { useCallback } from "react"
 
 import workflowLogo from "../assets/Navbar/workflow-logo.svg"
 import loginIcon from "../assets/Navbar/login-icon.svg"
+import burgerIcon from "../assets/Navbar/burger-icon.svg"
+import type { SetState } from "../types"
 
 import Pad from "./common/Pad"
 
@@ -20,28 +23,42 @@ const StyledImage = styled(ImageComponent)`
   cursor: pointer;
 `
 
-const Navbar = () => (
-  <Pad>
-    <Row className="mt-4 mb-3">
-      <Col className="text-end" xs={{ offset: 10, span: 2 }}>
-        <StyledLink href="#">Volver</StyledLink>
-      </Col>
-    </Row>
-    <Row>
-      <Col className="d-flex align-items-end fs-1 ps-4 pb-2" xs={2}>
-        ☰
-      </Col>
-      <Col className="d-flex justify-content-center" xs={8}>
-        <ImageComponent fluid src={workflowLogo} />
-      </Col>
-      <Col
-        className="d-flex align-items-end justify-content-end pe-4 pb-2"
-        xs={2}
-      >
-        <StyledImage fluid src={loginIcon} />
-      </Col>
-    </Row>
-  </Pad>
-)
+type NavbarProps = Readonly<{
+  setIsSidebarOpen: SetState<boolean>
+}>
+
+const Navbar = ({ setIsSidebarOpen }: NavbarProps) => {
+  const handleBurgerClick = useCallback(() => {
+    setIsSidebarOpen(true)
+  }, [setIsSidebarOpen])
+
+  return (
+    <Pad>
+      <Row className="mt-4 mb-3">
+        <Col className="text-end" xs={{ offset: 10, span: 2 }}>
+          <StyledLink href="#">Volver</StyledLink>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="d-flex align-items-end fs-1 ps-4 pb-2" xs={2}>
+          <ImageComponent
+            onClick={handleBurgerClick}
+            role="button"
+            src={burgerIcon}
+          />
+        </Col>
+        <Col className="d-flex justify-content-center" xs={8}>
+          <ImageComponent fluid src={workflowLogo} />
+        </Col>
+        <Col
+          className="d-flex align-items-end justify-content-end pe-4 pb-2"
+          xs={2}
+        >
+          <StyledImage fluid src={loginIcon} />
+        </Col>
+      </Row>
+    </Pad>
+  )
+}
 
 export default Navbar

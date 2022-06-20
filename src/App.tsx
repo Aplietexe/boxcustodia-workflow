@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap"
+import { useState } from "react"
 
 import BackgroundColor from "./components/common/BackgroundColor"
 import ContactForm from "./components/ContactForm"
@@ -11,23 +12,34 @@ import Services from "./components/Services"
 import Footer from "./components/Footer"
 import Pad from "./components/common/Pad"
 import Company from "./components/Company"
+import Sidebar from "./components/Sidebar"
 
-const App = () => (
-  <Container fluid>
-    <Navbar />
-    <Header />
-    <Features />
-    <BackgroundColor color="var(--gray-light)">
-      <Pad>
-        <Services />
-        <Perks />
-      </Pad>
-    </BackgroundColor>
-    <Industries />
-    <Company />
-    <ContactForm />
-    <Footer />
-  </Container>
-)
+const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  return (
+    <>
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
+      <Container fluid>
+        <Navbar setIsSidebarOpen={setIsSidebarOpen} />
+        <Header />
+        <Features />
+        <BackgroundColor color="var(--gray-light)">
+          <Pad>
+            <Services />
+            <Perks />
+          </Pad>
+        </BackgroundColor>
+        <Industries />
+        <Company />
+        <ContactForm />
+        <Footer />
+      </Container>
+    </>
+  )
+}
 
 export default App

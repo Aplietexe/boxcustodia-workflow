@@ -17,7 +17,7 @@ const Paragraph = styled.p`
 `
 const Company = () => (
   <Pad>
-    <div className="d-flex flex-column align-items-center pb-5">
+    <div className="d-flex flex-column align-items-center pb-5" id="company">
       <ImageComponent
         className="my-5 pt-5"
         src={boxLogo}

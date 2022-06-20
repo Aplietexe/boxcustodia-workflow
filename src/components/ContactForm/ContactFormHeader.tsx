@@ -33,7 +33,7 @@ const StyledRow = styled(Row)`
 `
 
 const ContactFormHeader = () => (
-  <StyledRow className="py-5">
+  <StyledRow className="py-5" id="contact-form">
     <Pad>
       <Col className="text-center py-4" xs={12}>
         <ImageComponent className="left-image" src={leftImage} />
