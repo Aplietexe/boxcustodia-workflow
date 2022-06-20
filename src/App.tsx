@@ -10,6 +10,7 @@ import Perks from "./components/Perks"
 import Services from "./components/Services"
 import Footer from "./components/Footer"
 import Pad from "./components/common/Pad"
+import Company from "./components/Company"
 
 const App = () => (
   <Container fluid>
@@ -23,6 +24,7 @@ const App = () => (
       </Pad>
     </BackgroundColor>
     <Industries />
+    <Company />
     <ContactForm />
     <Footer />
   </Container>
