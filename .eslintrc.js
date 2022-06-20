@@ -69,6 +69,7 @@ const typescriptRules = {
   "@typescript-eslint/strict-boolean-expressions": [
     "error",
     {
+      allowNullableBoolean: true,
       allowNullableString: true,
     },
   ],
