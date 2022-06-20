@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap"
 
 import BackgroundColor from "./components/common/BackgroundColor"
+import ContactForm from "./components/ContactForm"
 import Features from "./components/Features"
 import Header from "./components/Header"
 import Industries from "./components/Industries"
@@ -18,6 +19,7 @@ const App = () => (
       <Perks />
     </BackgroundColor>
     <Industries />
+    <ContactForm />
   </Container>
 )
 
