@@ -16,8 +16,8 @@ const StyledForm = styled(Form)`
 `
 
 const ContactFormBody = () => (
-  <Row className="py-5">
-    <Col xs={{ offset: 2, span: 8 }}>
+  <Row className="py-5 mt-5">
+    <Col xs={{ offset: 1, span: 10 }}>
       <StyledForm className="px-2">
         <FloatingLabel
           className="mb-3"

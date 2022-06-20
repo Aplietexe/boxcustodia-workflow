@@ -4,6 +4,8 @@ import styled from "styled-components"
 import workflowLogo from "../assets/workflow-logo.svg"
 import userLogo from "../assets/user-logo.svg"
 
+import Pad from "./common/Pad"
+
 const StyledLink = styled.a`
   font-family: "Open Sans", sans-serif;
   font-size: 1.1875rem;
@@ -14,27 +16,27 @@ const StyledLink = styled.a`
 `
 
 const Navbar = () => (
-  <>
-    <Row className="my-3">
-      <Col xs={{ offset: 10, span: 2 }}>
+  <Pad>
+    <Row className="mt-4 mb-3">
+      <Col className="text-end" xs={{ offset: 10, span: 2 }}>
         <StyledLink href="#">Volver</StyledLink>
       </Col>
     </Row>
     <Row>
-      <Col
-        className="d-flex align-items-center fs-1 justify-content-center"
-        xs={2}
-      >
+      <Col className="d-flex align-items-end fs-1 ps-4 pb-2" xs={2}>
         ☰
       </Col>
       <Col className="d-flex justify-content-center" xs={8}>
         <ImageComponent fluid src={workflowLogo} />
       </Col>
-      <Col className="d-flex align-items-center" xs={1}>
-        <ImageComponent fluid src={userLogo} />
+      <Col
+        className="d-flex align-items-end justify-content-end pe-4 pb-2"
+        xs={2}
+      >
+        <ImageComponent fluid src={userLogo} style={{ width: "2rem" }} />
       </Col>
     </Row>
-  </>
+  </Pad>
 )
 
 export default Navbar

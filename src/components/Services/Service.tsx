@@ -4,9 +4,10 @@ import styled from "styled-components"
 const ServiceWrapper = styled.div`
   border-radius: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
 
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 
   display: flex;
   gap: 10px;

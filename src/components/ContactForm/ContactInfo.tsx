@@ -38,13 +38,15 @@ const StyledLink = styled.a`
   font-weight: 600;
   color: var(--accent-light);
 
+  display: inline-block;
+
   img {
-    margin-left: 1.5em;
+    margin-left: 1em;
   }
 `
 
 const ContactInfo = () => (
-  <Row>
+  <Row className="mb-5 pb-5">
     <Col className="d-flex justify-content-center">
       <div>
         {contactOptions.map(({ image, text }) => (
@@ -53,7 +55,7 @@ const ContactInfo = () => (
             <StyledP className="m-0">{text}</StyledP>
           </OptionStyles>
         ))}
-        <StyledLink>
+        <StyledLink className="mt-3">
           Ponerse en contacto con comercial <ImageComponent src={arrowIcon} />
         </StyledLink>
       </div>

@@ -7,10 +7,13 @@ import centerImage from "../../assets/center-image.svg"
 import rightImage from "../../assets/right-image.svg"
 import StyledH2 from "../common/StyledH2"
 import StyledP from "../common/StyledP"
+import Pad from "../common/Pad"
 
 const StyledRow = styled(Row)`
   background-image: url(${backgroundImage});
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   img {
     position: relative;
@@ -31,15 +34,17 @@ const StyledRow = styled(Row)`
 
 const ContactFormHeader = () => (
   <StyledRow className="py-5">
-    <Col className="text-center pb-4" xs={12}>
-      <ImageComponent className="left-image" src={leftImage} />
-      <ImageComponent className="center-image" src={centerImage} />
-      <ImageComponent className="right-image" src={rightImage} />
-    </Col>
-    <Col className="text-center" xs={12}>
-      <StyledH2>¿Cómo podemos ayudarlo?</StyledH2>
-      <StyledP>Llene el formulario</StyledP>
-    </Col>
+    <Pad>
+      <Col className="text-center py-4" xs={12}>
+        <ImageComponent className="left-image" src={leftImage} />
+        <ImageComponent className="center-image" src={centerImage} />
+        <ImageComponent className="right-image" src={rightImage} />
+      </Col>
+      <Col className="text-center py-4" xs={12}>
+        <StyledH2 className="mb-4">¿Cómo podemos ayudarlo?</StyledH2>
+        <StyledP>Llene el formulario</StyledP>
+      </Col>
+    </Pad>
   </StyledRow>
 )
 

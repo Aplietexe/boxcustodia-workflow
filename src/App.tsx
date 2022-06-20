@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar"
 import Perks from "./components/Perks"
 import Services from "./components/Services"
 import Footer from "./components/Footer"
+import Pad from "./components/common/Pad"
 
 const App = () => (
   <Container fluid>
@@ -16,8 +17,10 @@ const App = () => (
     <Header />
     <Features />
     <BackgroundColor color="var(--gray-light)">
-      <Services />
-      <Perks />
+      <Pad>
+        <Services />
+        <Perks />
+      </Pad>
     </BackgroundColor>
     <Industries />
     <ContactForm />

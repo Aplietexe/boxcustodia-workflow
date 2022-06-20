@@ -20,8 +20,8 @@ const servicesContent: { image: string; text: string }[] = [
 const Services = () => (
   <>
     <Row className="pt-5">
-      <Col>
-        <StyledH2>Soluciones</StyledH2>
+      <Col className="pt-5 mb-4">
+        <StyledH2 className="mb-3">Soluciones</StyledH2>
         <StyledP>Elegí</StyledP>
       </Col>
     </Row>

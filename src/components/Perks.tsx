@@ -1,4 +1,5 @@
 import { Row, Image as ImageComponent, Col } from "react-bootstrap"
+import styled from "styled-components"
 
 import perk1 from "../assets/perk-1.svg"
 import perk2 from "../assets/perk-2.svg"
@@ -19,23 +20,25 @@ const perksContent: { image: string; text: string; title: string }[] = [
   },
 ]
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+`
+
 const Perks = () => (
   <Row className="py-5">
-    {perksContent.map(({ image, title, text }) => (
-      <Col key={title} xs={6}>
-        <Row className="my-5">
-          <Col xs={12}>
+    <Col>
+      <Grid>
+        {perksContent.map(({ image, title, text }) => (
+          <div key={title}>
             <ImageComponent fluid src={image} />
-          </Col>
-          <Col className="mt-3" xs={12}>
-            <StyledH4>{title}</StyledH4>
-          </Col>
-          <Col xs={12}>
+            <StyledH4 className="pt-3 mb-2">{title}</StyledH4>
             <StyledP>{text}</StyledP>
-          </Col>
-        </Row>
-      </Col>
-    ))}
+          </div>
+        ))}
+      </Grid>
+    </Col>
   </Row>
 )
 

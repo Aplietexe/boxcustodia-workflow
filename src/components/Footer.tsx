@@ -14,7 +14,7 @@ const StyledCol = styled(Col)`
 
 const Footer = () => (
   <BackgroundColor className="mt-5" color="var(--accent-dark)">
-    <StyledCol className="p-2">
+    <StyledCol className="p-3">
       Copyright &copy; 2021 Workflow. <br />
       Desarrollado por Box Custodia de Archivos S.A.
     </StyledCol>

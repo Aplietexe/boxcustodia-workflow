@@ -1,3 +1,5 @@
+import Pad from "../common/Pad"
+
 import ContactFormBody from "./ContactFormBody"
 import ContactFormHeader from "./ContactFormHeader"
 import ContactInfo from "./ContactInfo"
@@ -5,8 +7,10 @@ import ContactInfo from "./ContactInfo"
 const ContactForm = () => (
   <>
     <ContactFormHeader />
-    <ContactFormBody />
-    <ContactInfo />
+    <Pad>
+      <ContactFormBody />
+      <ContactInfo />
+    </Pad>
   </>
 )
 
