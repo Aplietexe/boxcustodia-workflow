@@ -8,6 +8,7 @@ import Industries from "./components/Industries"
 import Navbar from "./components/Navbar"
 import Perks from "./components/Perks"
 import Services from "./components/Services"
+import Footer from "./components/Footer"
 
 const App = () => (
   <Container fluid>
@@ -20,6 +21,7 @@ const App = () => (
     </BackgroundColor>
     <Industries />
     <ContactForm />
+    <Footer />
   </Container>
 )
 
