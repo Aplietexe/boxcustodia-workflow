@@ -1,15 +1,23 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
+import styled from "styled-components"
 
 import workflowLogo from "../assets/workflow-logo.svg"
 import userLogo from "../assets/user-logo.svg"
+
+const StyledLink = styled.a`
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 400;
+  color: #7eb6ce;
+
+  text-decoration: none;
+`
 
 const Navbar = () => (
   <>
     <Row className="my-3">
       <Col xs={{ offset: 10, span: 2 }}>
-        <a className="text-decoration-none" href="#">
-          Volver
-        </a>
+        <StyledLink href="#">Volver</StyledLink>
       </Col>
     </Row>
     <Row>

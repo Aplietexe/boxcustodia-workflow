@@ -4,9 +4,14 @@ import styled from "styled-components"
 import AccentButton from "../common/AccentButton"
 
 const StyledForm = styled(Form)`
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--gray-dark);
+
   input,
   textarea {
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
   }
 `
 

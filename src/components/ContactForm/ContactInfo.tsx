@@ -5,6 +5,7 @@ import phoneIcon1 from "../../assets/phone-icon-1.svg"
 import phoneIcon2 from "../../assets/phone-icon-2.svg"
 import mailIcon from "../../assets/mail-icon.svg"
 import arrowIcon from "../../assets/arrow-icon.svg"
+import StyledP from "../common/StyledP"
 
 const contactOptions: { image: string; text: string }[] = [
   {
@@ -32,7 +33,10 @@ const OptionStyles = styled(Col)`
 `
 
 const StyledLink = styled.a`
-  color: var(--accent-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-light);
 
   img {
     margin-left: 1.5em;
@@ -46,7 +50,7 @@ const ContactInfo = () => (
         {contactOptions.map(({ image, text }) => (
           <OptionStyles className="mb-3" key={text}>
             <ImageComponent src={image} />
-            <p className="m-0">{text}</p>
+            <StyledP className="m-0">{text}</StyledP>
           </OptionStyles>
         ))}
         <StyledLink>

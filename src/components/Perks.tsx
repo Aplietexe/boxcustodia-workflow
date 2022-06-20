@@ -3,6 +3,9 @@ import { Row, Image as ImageComponent, Col } from "react-bootstrap"
 import perk1 from "../assets/perk-1.svg"
 import perk2 from "../assets/perk-2.svg"
 
+import StyledP from "./common/StyledP"
+import StyledH4 from "./common/StyledH4"
+
 const perksContent: { image: string; text: string; title: string }[] = [
   {
     image: perk1,
@@ -25,10 +28,10 @@ const Perks = () => (
             <ImageComponent fluid src={image} />
           </Col>
           <Col className="mt-3" xs={12}>
-            <h3>{title}</h3>
+            <StyledH4>{title}</StyledH4>
           </Col>
           <Col xs={12}>
-            <p>{text}</p>
+            <StyledP>{text}</StyledP>
           </Col>
         </Row>
       </Col>

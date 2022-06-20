@@ -5,12 +5,11 @@ import industry1Image from "../assets/industry-1.svg"
 import industry2Image from "../assets/industry-2.svg"
 
 import BackgroundColor from "./common/BackgroundColor"
-
-const background = "darkblue"
+import StyledH2 from "./common/StyledH2"
 
 const Invert = styled.span`
   background-color: white;
-  color: ${background};
+  color: var(--accent-dark);
 `
 
 const industriesContent: { image: string; title: string }[] = [
@@ -37,20 +36,27 @@ const IndustryStyles = styled.div`
     height: 70px;
     margin-bottom: 2rem;
   }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--gray-light);
+  }
 `
 
 const Industries = () => (
-  <BackgroundColor className="text-white" color={background} isSingleRow>
+  <BackgroundColor color="var(--accent-dark)" isSingleRow>
     <Col className="py-5" xs={12}>
-      <h2>
+      <StyledH2 className="text-white">
         Una solución para cada <Invert> industria </Invert>
-      </h2>
+      </StyledH2>
     </Col>
     <Col className="d-flex flex-wrap justify-content-between" xs={12}>
       {industriesContent.map(({ image, title }) => (
         <IndustryStyles key={title}>
           <ImageComponent fluid src={image} />
-          <p className="text-center">{title}</p>
+          <p className="text-center text-white">{title}</p>
         </IndustryStyles>
       ))}
     </Col>

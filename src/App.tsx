@@ -15,7 +15,7 @@ const App = () => (
     <Navbar />
     <Header />
     <Features />
-    <BackgroundColor color="#aaa">
+    <BackgroundColor color="var(--gray-light)">
       <Services />
       <Perks />
     </BackgroundColor>

@@ -2,6 +2,8 @@ import { Col, Row } from "react-bootstrap"
 
 import documentDistributionImage from "../../assets/document-distribution-image.svg"
 import timeStrampingImage from "../../assets/time-stamping-image.svg"
+import StyledH2 from "../common/StyledH2"
+import StyledP from "../common/StyledP"
 
 import Service from "./Service"
 
@@ -19,8 +21,8 @@ const Services = () => (
   <>
     <Row className="pt-5">
       <Col>
-        <h2>Soluciones</h2>
-        <p>Elegí</p>
+        <StyledH2>Soluciones</StyledH2>
+        <StyledP>Elegí</StyledP>
       </Col>
     </Row>
     <Row>

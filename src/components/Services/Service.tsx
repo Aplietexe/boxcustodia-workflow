@@ -11,6 +11,13 @@ const ServiceWrapper = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--accent-dark);
+  }
 `
 
 type ServiceProps = Readonly<{
