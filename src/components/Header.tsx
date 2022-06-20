@@ -1,7 +1,7 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import headerImage from "../assets/header-image.png"
+import image from "../assets/Header/image.png"
 
 import AccentButton from "./common/AccentButton"
 import Pad from "./common/Pad"
@@ -17,7 +17,7 @@ const Paragraph = styled.p`
 const Header = () => (
   <Row className="mb-4">
     <Col xs={12}>
-      <ImageComponent className="my-5" fluid src={headerImage} />
+      <ImageComponent className="my-5" fluid src={image} />
     </Col>
     <Col xs={12}>
       <Pad>
@@ -29,13 +29,9 @@ const Header = () => (
           </Col>
           <Col className="mb-4" xs={12}>
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
+              A través de esta herramienta podrás aumentar la productividad de
+              tu negocio eliminando la gestión manual de documentos, tareas o
+              información que va pasando de persona a persona.
             </Paragraph>
           </Col>
           <Col xs={6}>

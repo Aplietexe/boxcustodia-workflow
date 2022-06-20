@@ -1,32 +1,25 @@
 import { Col, Row } from "react-bootstrap"
 
-import documentDistributionImage from "../../assets/document-distribution-image.svg"
-import timeStrampingImage from "../../assets/time-stamping-image.svg"
 import StyledH2 from "../common/StyledH2"
 import StyledP from "../common/StyledP"
 
 import Service from "./Service"
+import content from "./content"
 
-const servicesContent: { image: string; text: string }[] = [
-  {
-    image: documentDistributionImage,
-    text: "Distribución",
-  },
-  {
-    image: timeStrampingImage,
-    text: "Time Stamping",
-  },
-]
 const Services = () => (
   <>
     <Row className="pt-5">
       <Col className="pt-5 mb-4">
-        <StyledH2 className="mb-3">Soluciones</StyledH2>
-        <StyledP>Elegí</StyledP>
+        <StyledH2 className="mb-3">
+          Soluciones a medida de nuestros clientes
+        </StyledH2>
+        <StyledP>
+          Elegí los microservicios que mejor se adapten a tu proceso de negocio.
+        </StyledP>
       </Col>
     </Row>
     <Row>
-      {servicesContent.map((service) => (
+      {content.map((service) => (
         <Service {...service} key={service.text} />
       ))}
     </Row>

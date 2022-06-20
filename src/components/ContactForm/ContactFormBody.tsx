@@ -1,7 +1,14 @@
-import { Col, FloatingLabel, Form, Row } from "react-bootstrap"
+import {
+  Col,
+  FloatingLabel,
+  Form,
+  Image as ImageComponent,
+  Row,
+} from "react-bootstrap"
 import styled from "styled-components"
 
 import AccentButton from "../common/AccentButton"
+import sendIcon from "../../assets/ContactForm/send.svg"
 
 const StyledForm = styled(Form)`
   font-family: "Poppins", sans-serif;
@@ -11,7 +18,19 @@ const StyledForm = styled(Form)`
 
   input,
   textarea {
-    border-radius: var(--border-radius);
+    border-radius: calc(var(--border-radius) * 0.7);
+  }
+
+  input {
+    height: 60px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  img {
+    margin-left: 0.75rem;
   }
 `
 
@@ -36,14 +55,12 @@ const ContactFormBody = () => (
           <Form.Control placeholder="Empresa" type="text" />
         </FloatingLabel>
         <FloatingLabel className="mb-4" controlId="message" label="Mensaje">
-          <Form.Control
-            as="textarea"
-            placeholder="Mensaje"
-            style={{ height: 100 }}
-            type="text"
-          />
+          <Form.Control as="textarea" placeholder="Mensaje" type="text" />
         </FloatingLabel>
-        <AccentButton>Enviar</AccentButton>
+        <AccentButton>
+          Enviar
+          <ImageComponent src={sendIcon} />
+        </AccentButton>
       </StyledForm>
     </Col>
   </Row>

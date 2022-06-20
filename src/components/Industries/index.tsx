@@ -1,28 +1,18 @@
 import { Col, Image as ImageComponent } from "react-bootstrap"
 import styled from "styled-components"
 
-import industry1Image from "../assets/industry-1.svg"
-import industry2Image from "../assets/industry-2.svg"
+import BackgroundColor from "../common/BackgroundColor"
+import Pad from "../common/Pad"
+import StyledH2 from "../common/StyledH2"
 
-import BackgroundColor from "./common/BackgroundColor"
-import Pad from "./common/Pad"
-import StyledH2 from "./common/StyledH2"
+import content from "./content"
 
 const Invert = styled.span`
   background-color: white;
   color: var(--accent-dark);
+  font-weight: 700;
+  line-height: 2;
 `
-
-const industriesContent: { image: string; title: string }[] = [
-  {
-    image: industry1Image,
-    title: "Recursos Humanos",
-  },
-  {
-    image: industry2Image,
-    title: "Bancos Seguros",
-  },
-]
 
 const IndustryStyles = styled.div`
   display: flex;
@@ -55,7 +45,7 @@ const Industries = () => (
         </StyledH2>
       </Col>
       <Col className="d-flex flex-wrap justify-content-between" xs={12}>
-        {industriesContent.map(({ image, title }) => (
+        {content.map(({ image, title }) => (
           <IndustryStyles key={title}>
             <ImageComponent fluid src={image} />
             <p className="text-center text-white">{title}</p>

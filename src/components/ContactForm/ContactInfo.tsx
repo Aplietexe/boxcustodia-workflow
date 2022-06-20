@@ -1,24 +1,24 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import phoneIcon1 from "../../assets/phone-icon-1.svg"
-import phoneIcon2 from "../../assets/phone-icon-2.svg"
-import mailIcon from "../../assets/mail-icon.svg"
+import phone1Icon from "../../assets/ContactForm/phone-1.svg"
+import phone2Icon from "../../assets/ContactForm/phone-2.svg"
+import mailIcon from "../../assets/ContactForm/mail.svg"
 import arrowIcon from "../../assets/arrow-icon.svg"
 import StyledP from "../common/StyledP"
 
 const contactOptions: { image: string; text: string }[] = [
   {
-    image: phoneIcon1,
-    text: "phone1",
+    image: phone1Icon,
+    text: "(+54 011) 5032 2355 Int. 2002",
   },
   {
-    image: phoneIcon2,
-    text: "phone2",
+    image: phone2Icon,
+    text: "(+54 011) 15 - 37886510",
   },
   {
     image: mailIcon,
-    text: "mail",
+    text: "agarcia@boxcustodia.com",
   },
 ]
 
@@ -37,6 +37,8 @@ const StyledLink = styled.a`
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent-light);
+
+  text-decoration: none;
 
   display: inline-block;
 

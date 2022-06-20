@@ -1,8 +1,8 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import workflowLogo from "../assets/workflow-logo.svg"
-import userLogo from "../assets/user-logo.svg"
+import workflowLogo from "../assets/Navbar/workflow-logo.svg"
+import loginIcon from "../assets/Navbar/login-icon.svg"
 
 import Pad from "./common/Pad"
 
@@ -33,7 +33,7 @@ const Navbar = () => (
         className="d-flex align-items-end justify-content-end pe-4 pb-2"
         xs={2}
       >
-        <ImageComponent fluid src={userLogo} style={{ width: "2rem" }} />
+        <ImageComponent fluid src={loginIcon} style={{ width: "2rem" }} />
       </Col>
     </Row>
   </Pad>
