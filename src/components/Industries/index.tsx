@@ -19,8 +19,6 @@ const IndustryStyles = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  margin-bottom: 2.5rem;
-
   width: 170px;
 
   img {
@@ -36,6 +34,13 @@ const IndustryStyles = styled.div`
   }
 `
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 5rem 2.5rem;
+  justify-items: center;
+`
+
 const Industries = () => (
   <BackgroundColor className="py-5" color="var(--accent-dark)" isSingleRow>
     <Pad>
@@ -44,13 +49,15 @@ const Industries = () => (
           Una solución para cada <Invert> industria </Invert>
         </StyledH2>
       </Col>
-      <Col className="d-flex flex-wrap justify-content-between" xs={12}>
-        {content.map(({ image, title }) => (
-          <IndustryStyles key={title}>
-            <ImageComponent fluid src={image} />
-            <p className="text-center text-white">{title}</p>
-          </IndustryStyles>
-        ))}
+      <Col xs={12}>
+        <Grid>
+          {content.map(({ image, title }) => (
+            <IndustryStyles key={title}>
+              <ImageComponent fluid src={image} />
+              <p className="text-center text-white">{title}</p>
+            </IndustryStyles>
+          ))}
+        </Grid>
       </Col>
     </Pad>
   </BackgroundColor>
