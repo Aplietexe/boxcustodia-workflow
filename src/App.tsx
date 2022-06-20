@@ -1,5 +1,6 @@
-import { Col, Container, Row } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 
+import BackgroundColor from "./components/common/BackgroundColor"
 import Features from "./components/Features"
 import Header from "./components/Header"
 import Navbar from "./components/Navbar"
@@ -11,12 +12,10 @@ const App = () => (
     <Navbar />
     <Header />
     <Features />
-    <Row style={{ backgroundColor: "#aaa" }}>
-      <Col>
-        <Services />
-        <Perks />
-      </Col>
-    </Row>
+    <BackgroundColor color="#aaa">
+      <Services />
+      <Perks />
+    </BackgroundColor>
   </Container>
 )
 
