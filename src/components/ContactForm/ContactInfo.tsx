@@ -6,6 +6,7 @@ import phone2Icon from "../../assets/ContactForm/phone-2.svg"
 import mailIcon from "../../assets/ContactForm/mail.svg"
 import arrowIcon from "../../assets/arrow-icon.svg"
 import StyledP from "../common/StyledP"
+import StyledLink from "../common/StyledLink"
 
 const contactOptions: { image: string; text: string }[] = [
   {
@@ -29,21 +30,6 @@ const OptionStyles = styled(Col)`
 
   img {
     width: 1.25em;
-  }
-`
-
-const StyledLink = styled.a`
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent-light);
-
-  text-decoration: none;
-
-  display: inline-block;
-
-  img {
-    margin-left: 1em;
   }
 `
 
