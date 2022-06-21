@@ -1,4 +1,5 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
+import styled from "styled-components"
 
 import StyledH2 from "../common/StyledH2"
 import StyledP from "../common/StyledP"
@@ -6,6 +7,10 @@ import sideImage from "../../assets/Services/side.png"
 
 import Service from "./Service"
 import content from "./content"
+
+const StyledImage = styled(ImageComponent)`
+  transform: translateX(13.5%);
+`
 
 const Services = () => (
   <>
@@ -20,15 +25,15 @@ const Services = () => (
       </Col>
     </Row>
     <Row>
-      <Col xl={7} xs={12}>
+      <Col xs={12} xxl={7}>
         <Row>
           {content.map((service) => (
             <Service {...service} key={service.text} />
           ))}
         </Row>
       </Col>
-      <Col className="d-none d-xl-flex align-items-center justify-content-end">
-        <ImageComponent fluid src={sideImage} />
+      <Col className="d-none d-xxl-flex align-items-center justify-content-end">
+        <StyledImage fluid src={sideImage} />
       </Col>
     </Row>
   </>
