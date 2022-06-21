@@ -3,8 +3,18 @@ import styled from "styled-components"
 
 import StyledP from "../common/StyledP"
 import StyledH4 from "../common/StyledH4"
+import tabletsImage from "../../assets/Perks/tablets.png"
+import Pad from "../common/Pad"
+import useBreakpoints from "../../hooks/useBreakpoints"
 
 import content from "./content"
+
+const StyledRow = styled(Row)`
+  background-image: url(${tabletsImage});
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+`
 
 const Grid = styled.div`
   display: grid;
@@ -12,20 +22,34 @@ const Grid = styled.div`
   gap: 3rem;
 `
 
-const Perks = () => (
-  <Row className="py-5">
-    <Col>
-      <Grid>
-        {content.map(({ image, title, text }) => (
-          <div key={title}>
-            <ImageComponent fluid src={image} />
-            <StyledH4 className="pt-3 mb-2">{title}</StyledH4>
-            <StyledP>{text}</StyledP>
-          </div>
-        ))}
-      </Grid>
+const Perks = () => {
+  const grid = (
+    <Col className="py-5">
+      <Pad>
+        <Row>
+          <Col xs={12} xxl={7}>
+            <Grid>
+              {content.map(({ image, title, text }) => (
+                <div key={title}>
+                  <ImageComponent fluid src={image} />
+                  <StyledH4 className="pt-3 mb-2">{title}</StyledH4>
+                  <StyledP>{text}</StyledP>
+                </div>
+              ))}
+            </Grid>
+          </Col>
+        </Row>
+      </Pad>
     </Col>
-  </Row>
-)
+  )
+
+  const breakpoints = useBreakpoints()
+
+  return breakpoints.xxl ? (
+    <StyledRow className="py-5">{grid}</StyledRow>
+  ) : (
+    <Row className="py-5">{grid}</Row>
+  )
+}
 
 export default Perks

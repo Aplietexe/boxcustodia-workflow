@@ -30,8 +30,8 @@ const App = () => {
         <BackgroundColor className="mt-5" color="var(--gray-light)">
           <Pad>
             <Services />
-            <Perks />
           </Pad>
+          <Perks />
         </BackgroundColor>
         <Industries />
         <Company />
