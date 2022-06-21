@@ -1,9 +1,9 @@
-import { Col, Image as ImageComponent } from "react-bootstrap"
+import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import BackgroundColor from "../common/BackgroundColor"
 import Pad from "../common/Pad"
 import StyledH2 from "../common/StyledH2"
+import backgroundImage from "../../assets/Industries/background.jpg"
 
 import content from "./content"
 
@@ -41,26 +41,37 @@ const Grid = styled.div`
   justify-items: center;
 `
 
+const StyledRow = styled(Row)`
+  background-image: url(${backgroundImage});
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+`
+
 const Industries = () => (
-  <BackgroundColor className="py-5" color="var(--accent-dark)" isSingleRow>
-    <Pad>
-      <Col className="py-5" xs={12}>
-        <StyledH2 className="text-white">
-          Una solución para cada <Invert> industria </Invert>
-        </StyledH2>
-      </Col>
-      <Col xs={12}>
-        <Grid>
-          {content.map(({ image, title }) => (
-            <IndustryStyles key={title}>
-              <ImageComponent fluid src={image} />
-              <p className="text-center text-white">{title}</p>
-            </IndustryStyles>
-          ))}
-        </Grid>
-      </Col>
-    </Pad>
-  </BackgroundColor>
+  <StyledRow className="py-5">
+    <Col>
+      <Pad>
+        <Row>
+          <Col className="py-5 d-xl-flex align-items-center" xl={5} xs={12}>
+            <StyledH2 className="text-white">
+              Una solución para cada <Invert> industria </Invert>
+            </StyledH2>
+          </Col>
+          <Col className="py-5" xl={7} xs={12}>
+            <Grid>
+              {content.map(({ image, title }) => (
+                <IndustryStyles key={title}>
+                  <ImageComponent fluid src={image} />
+                  <p className="text-center text-white">{title}</p>
+                </IndustryStyles>
+              ))}
+            </Grid>
+          </Col>
+        </Row>
+      </Pad>
+    </Col>
+  </StyledRow>
 )
 
 export default Industries
