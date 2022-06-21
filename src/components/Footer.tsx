@@ -9,14 +9,21 @@ const StyledCol = styled(Col)`
   font-weight: 400;
   color: #fff;
 
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  p {
+    text-align: center;
+    padding-inline: 1rem;
+  }
 `
 
 const Footer = () => (
   <BackgroundColor className="mt-5" color="var(--accent-dark)">
     <StyledCol className="p-3">
-      Copyright &copy; 2021 Workflow. <br />
-      Desarrollado por Box Custodia de Archivos S.A.
+      <p>Copyright &copy; 2021 Workflow.</p>
+      <p>Desarrollado por Box Custodia de Archivos S.A.</p>
     </StyledCol>
   </BackgroundColor>
 )
