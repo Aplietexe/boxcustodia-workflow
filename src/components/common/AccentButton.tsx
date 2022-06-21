@@ -14,7 +14,7 @@ const StyledButton = styled.button`
 
   background-color: var(--accent-light);
   width: 100%;
-  padding: 0.88em 1.62em;
+  padding: 0.88em 1em;
 
   &:hover {
     background-color: var(--accent-dark);
