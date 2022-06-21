@@ -104,7 +104,9 @@ const Navbar = ({ setIsSidebarOpen }: NavbarProps) => {
             xl={5}
             xs={8}
           >
-            <ImageComponent fluid src={workflowLogo} />
+            <a href="#root">
+              <ImageComponent fluid src={workflowLogo} />
+            </a>
           </Col>
           <Col
             className="d-flex align-items-end justify-content-end pe-4 pb-2 d-xl-none"
