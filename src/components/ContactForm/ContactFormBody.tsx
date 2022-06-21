@@ -26,7 +26,7 @@ const StyledForm = styled(Form)`
   }
 
   textarea {
-    height: 120px;
+    height: 120px !important;
   }
 
   img {
