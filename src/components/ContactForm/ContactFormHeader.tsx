@@ -1,10 +1,10 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import backgroundImage from "../../assets/ContactForm/background.jpg"
-import leftImage from "../../assets/ContactForm/left.svg"
-import centerImage from "../../assets/ContactForm/center.svg"
-import rightImage from "../../assets/ContactForm/right.svg"
+import backgroundImage from "../../assets/ContactForm/background.webp"
+import leftImage from "../../assets/ContactForm/left.webp"
+import centerImage from "../../assets/ContactForm/center.webp"
+import rightImage from "../../assets/ContactForm/right.webp"
 import StyledH2 from "../common/StyledH2"
 import StyledP from "../common/StyledP"
 import Pad from "../common/Pad"
@@ -36,9 +36,30 @@ const ContactFormHeader = () => (
   <StyledRow className="py-5" id="contact-form">
     <Pad>
       <Col className="text-center py-4" xs={12}>
-        <ImageComponent className="left-image" src={leftImage} />
-        <ImageComponent className="center-image" src={centerImage} />
-        <ImageComponent className="right-image" src={rightImage} />
+        <ImageComponent
+          alt="Retrato"
+          className="left-image"
+          fluid
+          height={116}
+          src={leftImage}
+          width={116}
+        />
+        <ImageComponent
+          alt="Retrato"
+          className="center-image"
+          fluid
+          height={187}
+          src={centerImage}
+          width={187}
+        />
+        <ImageComponent
+          alt="Retrato"
+          className="right-image"
+          fluid
+          height={116}
+          src={rightImage}
+          width={116}
+        />
       </Col>
       <Col className="text-center py-4" xs={12}>
         <StyledH2 className="mb-4">¿Cómo podemos ayudarlo?</StyledH2>

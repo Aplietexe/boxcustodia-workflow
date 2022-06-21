@@ -30,7 +30,7 @@ type ServiceProps = Readonly<{
 const Service = ({ image, text }: ServiceProps) => (
   <Col lg={6} xs={12}>
     <ServiceWrapper>
-      <ImageComponent fluid src={image} />
+      <ImageComponent alt="Icono" fluid height={78} src={image} width={78} />
       <p>{text}</p>
     </ServiceWrapper>
   </Col>

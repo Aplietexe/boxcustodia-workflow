@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import StyledP from "../common/StyledP"
 import StyledH4 from "../common/StyledH4"
-import tabletsImage from "../../assets/Perks/tablets.png"
+import tabletsImage from "../../assets/Perks/tablets.webp"
 import Pad from "../common/Pad"
 import useBreakpoints from "../../hooks/useBreakpoints"
 
@@ -29,9 +29,15 @@ const Perks = () => {
         <Row>
           <Col xs={12} xxl={7}>
             <Grid>
-              {content.map(({ image, title, text }) => (
+              {content.map(({ height, image, title, text, width }) => (
                 <div key={title}>
-                  <ImageComponent fluid src={image} />
+                  <ImageComponent
+                    alt={title}
+                    fluid
+                    height={height}
+                    src={image}
+                    width={width}
+                  />
                   <StyledH4 className="pt-3 mb-2">{title}</StyledH4>
                   <StyledP>{text}</StyledP>
                 </div>

@@ -1,9 +1,9 @@
 import { Image as ImageComponent } from "react-bootstrap"
 import styled from "styled-components"
 
-import arrowIcon from "../assets/arrow-icon.svg"
 import boxLogo from "../assets/Company/box-logo.svg"
 
+import ArrowIcon from "./common/ArrowIcon"
 import Pad from "./common/Pad"
 import StyledLink from "./common/StyledLink"
 
@@ -18,11 +18,14 @@ const Paragraph = styled.p`
 `
 const Company = () => (
   <Pad>
-    <div className="d-flex flex-column align-items-center pb-5" id="company">
+    <div className="d-flex flex-column align-items-center py-5" id="company">
       <ImageComponent
-        className="my-5 pt-5"
+        alt="Box Custodia y gestión digital"
+        className="my-5"
+        fluid
+        height={76}
         src={boxLogo}
-        style={{ width: 450 }}
+        width={450}
       />
       <Paragraph className="mb-5">
         ¡Somos una compañía argentina apasionada por la innovación! Con más de
@@ -32,7 +35,7 @@ const Company = () => (
       </Paragraph>
       <StyledLink className="mb-5" href="#">
         Conocé nuestra empresa Box custodia
-        <ImageComponent src={arrowIcon} />
+        <ArrowIcon />
       </StyledLink>
     </div>
   </Pad>

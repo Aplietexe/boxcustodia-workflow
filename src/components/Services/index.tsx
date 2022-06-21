@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import StyledH2 from "../common/StyledH2"
 import StyledP from "../common/StyledP"
-import sideImage from "../../assets/Services/side.png"
+import sideImage from "../../assets/Services/side.webp"
 
 import Service from "./Service"
 import content from "./content"
@@ -33,7 +33,13 @@ const Services = () => (
         </Row>
       </Col>
       <Col className="d-none d-xxl-flex align-items-center justify-content-end">
-        <StyledImage fluid src={sideImage} />
+        <StyledImage
+          alt="Personas"
+          fluid
+          height={746}
+          src={sideImage}
+          width={748}
+        />
       </Col>
     </Row>
   </>

@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Pad from "../common/Pad"
 import StyledH2 from "../common/StyledH2"
-import backgroundImage from "../../assets/Industries/background.jpg"
+import backgroundImage from "../../assets/Industries/background.webp"
 
 import content from "./content"
 
@@ -65,9 +65,15 @@ const Industries = () => (
           </Col>
           <Col className="py-5" xl={8} xs={12} xxl={7}>
             <Grid>
-              {content.map(({ image, title }) => (
+              {content.map(({ height, image, title, width }) => (
                 <IndustryStyles key={title}>
-                  <ImageComponent fluid src={image} />
+                  <ImageComponent
+                    alt={title}
+                    fluid
+                    height={height}
+                    src={image}
+                    width={width}
+                  />
                   <p className="text-center text-white">{title}</p>
                 </IndustryStyles>
               ))}

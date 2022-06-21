@@ -59,7 +59,13 @@ const ContactFormBody = () => (
         </FloatingLabel>
         <AccentButton>
           Enviar
-          <ImageComponent src={sendIcon} />
+          <ImageComponent
+            alt="Enviar"
+            fluid
+            height={27}
+            src={sendIcon}
+            width={32}
+          />
         </AccentButton>
       </StyledForm>
     </Col>

@@ -94,9 +94,13 @@ const Navbar = ({ setIsSidebarOpen }: NavbarProps) => {
             xs={2}
           >
             <ImageComponent
+              alt="Abrir menú"
+              fluid
+              height={22}
               onClick={handleBurgerClick}
               role="button"
               src={burgerIcon}
+              width={37}
             />
           </Col>
           <Col
@@ -105,14 +109,26 @@ const Navbar = ({ setIsSidebarOpen }: NavbarProps) => {
             xs={8}
           >
             <a href="#root">
-              <ImageComponent fluid src={workflowLogo} />
+              <ImageComponent
+                alt="Workflow"
+                fluid
+                height={83}
+                src={workflowLogo}
+                width={342}
+              />
             </a>
           </Col>
           <Col
             className="d-flex align-items-end justify-content-end pe-4 pb-2 d-xl-none"
             xs={2}
           >
-            <StyledImage fluid src={loginIcon} />
+            <StyledImage
+              alt="Ícono"
+              fluid
+              height={32}
+              src={loginIcon}
+              width={32}
+            />
           </Col>
           <NavLinks className="d-none d-xl-flex" xl={7}>
             <a href="#root">Inicio</a>

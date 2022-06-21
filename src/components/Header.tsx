@@ -1,7 +1,7 @@
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 
-import image from "../assets/Header/image.png"
+import image from "../assets/Header/image.webp"
 import useBreakpoints from "../hooks/useBreakpoints"
 
 import AccentButton from "./common/AccentButton"
@@ -18,7 +18,13 @@ const Paragraph = styled.p`
 const Header = () => {
   const imageCol = (
     <Col xl={{ order: 2, span: 6 }} xs={12}>
-      <ImageComponent fluid src={image} />
+      <ImageComponent
+        alt="Imagen del encabezado"
+        fluid
+        height={677}
+        src={image}
+        width={973}
+      />
     </Col>
   )
 
