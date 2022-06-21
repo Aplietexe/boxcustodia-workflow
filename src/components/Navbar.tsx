@@ -39,6 +39,12 @@ const NavLinks = styled(Col)`
     color: var(--text-color, var(--accent-dark));
 
     text-decoration: none;
+
+    transition: all 0.4s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `
 
@@ -48,6 +54,10 @@ const ContactLink = styled.a`
   --text-color: #fff;
 
   padding: 0.75rem 2rem;
+
+  &:hover {
+    background-color: var(--accent-dark);
+  }
 `
 
 type NavbarProps = Readonly<{

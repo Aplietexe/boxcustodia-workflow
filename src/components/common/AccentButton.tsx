@@ -15,9 +15,11 @@ const StyledButton = styled.button`
   background-color: var(--accent-light);
   width: 100%;
   padding: 0.88em 1em;
+  transition: all 0.4s;
 
   &:hover {
     background-color: var(--accent-dark);
+    transform: scale(1.05);
   }
 `
 
