@@ -1,3 +1,5 @@
+import { Row, Col } from "react-bootstrap"
+
 import Pad from "../common/Pad"
 
 import ContactFormBody from "./ContactFormBody"
@@ -8,8 +10,14 @@ const ContactForm = () => (
   <>
     <ContactFormHeader />
     <Pad>
-      <ContactFormBody />
-      <ContactInfo />
+      <Row>
+        <Col lg={{ order: 2, span: 6 }} xs={12}>
+          <ContactFormBody />
+        </Col>
+        <Col className="d-lg-flex align-items-center justify-content-center">
+          <ContactInfo />
+        </Col>
+      </Row>
     </Pad>
   </>
 )

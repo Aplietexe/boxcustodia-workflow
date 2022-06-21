@@ -33,8 +33,12 @@ const OptionStyles = styled(Col)`
   }
 `
 
+const NoWrap = styled.span`
+  white-space: nowrap;
+`
+
 const ContactInfo = () => (
-  <Row className="mb-5 pb-5">
+  <Row className="mb-5 pb-5 p-lg-0 m-lg-0">
     <Col className="d-flex justify-content-center">
       <div>
         {contactOptions.map(({ image, text }) => (
@@ -44,7 +48,11 @@ const ContactInfo = () => (
           </OptionStyles>
         ))}
         <StyledLink className="mt-3">
-          Ponerse en contacto con comercial <ImageComponent src={arrowIcon} />
+          Ponerse en contacto con{" "}
+          <NoWrap>
+            comercial
+            <ImageComponent src={arrowIcon} />
+          </NoWrap>
         </StyledLink>
       </div>
     </Col>
