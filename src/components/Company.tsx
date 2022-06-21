@@ -14,6 +14,7 @@ const Paragraph = styled.p`
   color: var(--accent-dark);
 
   text-align: center;
+  width: min(100%, 850px);
 `
 const Company = () => (
   <Pad>
