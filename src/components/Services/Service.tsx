@@ -6,7 +6,8 @@ const ServiceWrapper = styled.div`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   background-color: #fff;
 
-  padding: 1rem;
+  padding: 0.8rem;
+  height: calc(100% - 1.2rem);
   margin-bottom: 1.2rem;
 
   display: flex;
@@ -27,7 +28,7 @@ type ServiceProps = Readonly<{
 }>
 
 const Service = ({ image, text }: ServiceProps) => (
-  <Col xs={12}>
+  <Col xl={6} xs={12}>
     <ServiceWrapper>
       <ImageComponent fluid src={image} />
       <p>{text}</p>

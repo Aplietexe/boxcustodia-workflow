@@ -1,7 +1,8 @@
-import { Col, Row } from "react-bootstrap"
+import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 
 import StyledH2 from "../common/StyledH2"
 import StyledP from "../common/StyledP"
+import sideImage from "../../assets/Services/side.png"
 
 import Service from "./Service"
 import content from "./content"
@@ -19,9 +20,16 @@ const Services = () => (
       </Col>
     </Row>
     <Row>
-      {content.map((service) => (
-        <Service {...service} key={service.text} />
-      ))}
+      <Col xl={7} xs={12}>
+        <Row>
+          {content.map((service) => (
+            <Service {...service} key={service.text} />
+          ))}
+        </Row>
+      </Col>
+      <Col className="d-none d-xl-flex align-items-center justify-content-end">
+        <ImageComponent fluid src={sideImage} />
+      </Col>
     </Row>
   </>
 )

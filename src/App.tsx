@@ -27,7 +27,7 @@ const App = () => {
         <Navbar setIsSidebarOpen={setIsSidebarOpen} />
         <Header />
         <Features />
-        <BackgroundColor color="var(--gray-light)">
+        <BackgroundColor className="mt-5" color="var(--gray-light)">
           <Pad>
             <Services />
             <Perks />
