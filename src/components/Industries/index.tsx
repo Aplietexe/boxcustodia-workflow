@@ -37,7 +37,7 @@ const IndustryStyles = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 5rem 2.5rem;
+  gap: 5rem 1rem;
   justify-items: center;
 `
 
@@ -53,12 +53,17 @@ const Industries = () => (
     <Col>
       <Pad>
         <Row>
-          <Col className="py-5 d-xl-flex align-items-center" xl={5} xs={12}>
+          <Col
+            className="py-5 d-xl-flex align-items-center"
+            xl={4}
+            xs={12}
+            xxl={5}
+          >
             <StyledH2 className="text-white">
               Una solución para cada <Invert> industria </Invert>
             </StyledH2>
           </Col>
-          <Col className="py-5" xl={7} xs={12}>
+          <Col className="py-5" xl={8} xs={12} xxl={7}>
             <Grid>
               {content.map(({ image, title }) => (
                 <IndustryStyles key={title}>
