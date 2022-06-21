@@ -12,7 +12,7 @@ import content from "./content"
 const StyledRow = styled(Row)`
   background-image: url(${tabletsImage});
   background-position: bottom right;
-  background-size: contain;
+  background-size: 70% auto;
   background-repeat: no-repeat;
 `
 
