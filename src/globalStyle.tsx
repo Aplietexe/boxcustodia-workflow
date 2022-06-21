@@ -14,6 +14,12 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6, p {
     margin: 0
   }
+
+  .container-fluid {
+    scroll-snap-type: y proximity;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
 `
 
 export default GlobalStyle
