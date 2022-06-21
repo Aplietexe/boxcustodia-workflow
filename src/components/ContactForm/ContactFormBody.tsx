@@ -51,7 +51,11 @@ const ContactFormBody = () => (
         <FloatingLabel className="mb-3" controlId="email" label="Email">
           <Form.Control placeholder="Email" type="email" />
         </FloatingLabel>
-        <FloatingLabel className="mb-3" controlId="company" label="Empresa">
+        <FloatingLabel
+          className="mb-3"
+          controlId="companyField"
+          label="Empresa"
+        >
           <Form.Control placeholder="Empresa" type="text" />
         </FloatingLabel>
         <FloatingLabel className="mb-4" controlId="message" label="Mensaje">
