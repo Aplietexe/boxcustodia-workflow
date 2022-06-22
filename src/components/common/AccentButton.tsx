@@ -25,10 +25,13 @@ const StyledButton = styled.button`
 
 type AccentButtonProps = DeepReadonly<{
   children: ReactNode
+  href?: string
 }>
 
-const AccentButton = ({ children }: AccentButtonProps) => (
-  <StyledButton type="button">{children}</StyledButton>
-)
+const AccentButton = ({ children, href }: AccentButtonProps) => {
+  const button = <StyledButton type="button">{children}</StyledButton>
+
+  return href ? <a href={href}>{button}</a> : button
+}
 
 export default AccentButton
