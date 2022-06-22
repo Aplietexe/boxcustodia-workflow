@@ -48,7 +48,7 @@ const Header = () => {
           </Paragraph>
         </Col>
         <Col xs={6}>
-          <AccentButton>Solicitar cotización</AccentButton>
+          <AccentButton href="#contact-form">Solicitar cotización</AccentButton>
         </Col>
       </Row>
     </Col>
