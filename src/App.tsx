@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap"
 import { useState } from "react"
-import styled from "styled-components"
 
 import BackgroundColor from "./components/common/BackgroundColor"
 import ContactForm from "./components/ContactForm"
@@ -15,10 +14,6 @@ import Pad from "./components/common/Pad"
 import Company from "./components/Company"
 import Sidebar from "./components/Sidebar"
 
-const Snap = styled.div`
-  scroll-snap-align: start;
-`
-
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
@@ -31,20 +26,15 @@ const App = () => {
       <Container fluid>
         <Navbar setIsSidebarOpen={setIsSidebarOpen} />
         <Header />
-        <Snap />
         <Features />
-        <Snap />
         <BackgroundColor className="mt-5" color="var(--gray-light)">
           <Pad>
             <Services />
           </Pad>
           <Perks />
         </BackgroundColor>
-        <Snap />
         <Industries />
-        <Snap />
         <Company />
-        <Snap />
         <ContactForm />
         <Footer />
       </Container>
