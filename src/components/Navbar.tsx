@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-leaked-render */
 import { Col, Image as ImageComponent, Row } from "react-bootstrap"
 import styled from "styled-components"
 import { useCallback } from "react"
@@ -7,18 +6,8 @@ import workflowLogo from "../assets/Navbar/workflow-logo.svg"
 import loginIcon from "../assets/Navbar/login-icon.svg"
 import burgerIcon from "../assets/Navbar/burger-icon.svg"
 import type { SetState } from "../types"
-import useBreakpoints from "../hooks/useBreakpoints"
 
 import Pad from "./common/Pad"
-
-const StyledLink = styled.a`
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1875rem;
-  font-weight: 400;
-  color: #7eb6ce;
-
-  text-decoration: none;
-`
 
 const StyledImage = styled(ImageComponent)`
   width: 2rem;
@@ -69,76 +58,55 @@ const Navbar = ({ setIsSidebarOpen }: NavbarProps) => {
     setIsSidebarOpen(true)
   }, [setIsSidebarOpen])
 
-  const breakpoints = useBreakpoints()
-
-  const goBack = (
-    <Row className="mt-4 mb-3 mb-xl-4">
-      <Col
-        className="text-end text-xl-center"
-        xl={{ offset: 11, span: 1 }}
-        xs={{ offset: 10, span: 2 }}
-      >
-        <StyledLink href="#">Volver</StyledLink>
-      </Col>
-    </Row>
-  )
-
   return (
-    <>
-      {breakpoints.xl && goBack}
-      <Pad>
-        {!breakpoints.xl && goBack}
-        <Row>
-          <Col
-            className="d-flex align-items-end fs-1 ps-4 pb-2 d-xl-none"
-            xs={2}
-          >
+    <Pad>
+      <Row className="pt-5">
+        <Col className="d-flex align-items-end fs-1 ps-4 pb-2 d-xl-none" xs={2}>
+          <ImageComponent
+            alt="Abrir menú"
+            fluid
+            height={22}
+            onClick={handleBurgerClick}
+            role="button"
+            src={burgerIcon}
+            width={37}
+          />
+        </Col>
+        <Col
+          className="d-flex justify-content-center justify-content-xl-start"
+          xl={5}
+          xs={8}
+        >
+          <a href="#root">
             <ImageComponent
-              alt="Abrir menú"
+              alt="Workflow"
               fluid
-              height={22}
-              onClick={handleBurgerClick}
-              role="button"
-              src={burgerIcon}
-              width={37}
+              height={83}
+              src={workflowLogo}
+              width={342}
             />
-          </Col>
-          <Col
-            className="d-flex justify-content-center justify-content-xl-start"
-            xl={5}
-            xs={8}
-          >
-            <a href="#root">
-              <ImageComponent
-                alt="Workflow"
-                fluid
-                height={83}
-                src={workflowLogo}
-                width={342}
-              />
-            </a>
-          </Col>
-          <Col
-            className="d-flex align-items-end justify-content-end pe-4 pb-2 d-xl-none"
-            xs={2}
-          >
-            <StyledImage
-              alt="Ícono"
-              fluid
-              height={32}
-              src={loginIcon}
-              width={32}
-            />
-          </Col>
-          <NavLinks className="d-none d-xl-flex" xl={7}>
-            <a href="#root">Inicio</a>
-            <a href="#services">Servicios</a>
-            <a href="#company">Nosotros</a>
-            <ContactLink href="#contact-form">Contacto</ContactLink>
-          </NavLinks>
-        </Row>
-      </Pad>
-    </>
+          </a>
+        </Col>
+        <Col
+          className="d-flex align-items-end justify-content-end pe-4 pb-2 d-xl-none"
+          xs={2}
+        >
+          <StyledImage
+            alt="Ícono"
+            fluid
+            height={32}
+            src={loginIcon}
+            width={32}
+          />
+        </Col>
+        <NavLinks className="d-none d-xl-flex" xl={7}>
+          <a href="#root">Inicio</a>
+          <a href="#services">Servicios</a>
+          <a href="#company">Nosotros</a>
+          <ContactLink href="#contact-form">Contacto</ContactLink>
+        </NavLinks>
+      </Row>
+    </Pad>
   )
 }
 
