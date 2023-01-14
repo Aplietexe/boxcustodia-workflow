@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-leaked-render */
 import useBreakpoints from "../../hooks/useBreakpoints"
 import Pad from "../common/Pad"
 import StyledH2 from "../common/StyledH2"

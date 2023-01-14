@@ -1,14 +1,18 @@
 import "bootstrap/dist/css/bootstrap.css"
 import React from "react"
-import ReactDOM from "react-dom/client"
+import { createRoot } from "react-dom/client"
 
 import App from "./App"
 import GlobalStyle from "./globalStyle"
 
-const root = ReactDOM.createRoot(document.querySelector("#root") as HTMLElement)
-root.render(
-  <React.StrictMode>
-    <GlobalStyle />
-    <App />
-  </React.StrictMode>,
-)
+const container = document.querySelector("#root")
+
+if (container) {
+  const root = createRoot(container)
+  root.render(
+    <React.StrictMode>
+      <GlobalStyle />
+      <App />
+    </React.StrictMode>,
+  )
+}
